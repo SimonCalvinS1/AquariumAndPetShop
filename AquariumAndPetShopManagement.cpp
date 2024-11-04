@@ -23,9 +23,9 @@ class Pet{
 			delete breed;
 		}
 		static int makePetId(){ //static function
-            static int nextId = 101; //static variable
-            return nextId++;
-        }
+	            static int nextId = 101; //static variable
+	            return nextId++;
+	        }
 		void setPets(string petName,string breed,int price,int age){
 			petId = makePetId();
 			*this->petName=petName;
@@ -38,7 +38,7 @@ class Pet{
 		bool available(){return ifavailable;}
 		Pet& operator++(){++price;} //operator overloading for pre increment
 		void operator!(){ifavailable = !ifavailable;} //operator overloading
-    	virtual void display(){ //virtual function
+    		virtual void display(){ //virtual function
 			cout << "Pet ID : " << petId << endl;
 			cout << "Pet Name : " << *petName << endl;
 			cout << "Pet Breed : " << *breed << endl;
